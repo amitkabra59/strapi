@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alcohols",
+  "info": {
+    "singularName": "alcohol",
+    "pluralName": "alcohols",
+    "displayName": "alcohol",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ids": {
+      "type": "string"
+    },
+    "symptoms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::symptom.symptom",
+      "inversedBy": "alcohol"
+    }
+  }
+}
